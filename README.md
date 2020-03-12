@@ -103,12 +103,10 @@ The targets were converted to a binary classification:
 ## Real Estate Calculations
   
 ## Application
-  input 1
-  <img src="" style="width: 500px">
-  input 2
-  <img src="" style="width: 500px">
-  results 
-  <img src="" style="width: 500px">
+
+  <img src="https://github.com/scottrosengrants/re_investment_flask_app_neural_net/blob/master/images/app_inputs_1.jpeg" style="width: 500px"><img src="https://github.com/scottrosengrants/re_investment_flask_app_neural_net/blob/master/images/app_inputs_2.jpeg" style="width: 500px">
+
+  <img src="https://github.com/scottrosengrants/re_investment_flask_app_neural_net/blob/master/images/app_results.jpeg" style="width: 500px">
   
 ## Limitations
 
