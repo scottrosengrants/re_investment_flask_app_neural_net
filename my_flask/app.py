@@ -124,7 +124,7 @@ def call_api_all(bld_num,street,str_type,unit=None,unit_num=None,city=None,state
 
     headers = { 
         'accept': "application/json", 
-        'apikey': "5b3709e8f052f5a495b91df054a47709", 
+        'apikey': "XXX", 
     } 
     address_1 = f"address1={bld_num}%20{street}%20{str_type}%20{unit}%20{unit_num}"
     address_2 = f"&address2={city}%2C%20{state}"
