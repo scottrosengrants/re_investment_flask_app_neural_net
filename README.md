@@ -103,8 +103,37 @@ The targets were converted to a binary classification:
 ## Real Estate Calculations
   
 ## Application
+  input 1
+  <img src="" style="width: 500px">
+  input 2
+  <img src="" style="width: 500px">
+  results 
+  <img src="" style="width: 500px">
   
 ## Limitations
 
-## Future Work & Improvements
+The rental data is only based on County, this limits the accuracy of this information. 
+
+The model is a “black-box” model resulting more accurate predictions but unfortunately little to no insight to the user as to why they may be denied for a loan. 
+
+The data used to train the model was limited and may not be indicative to actual approval odds.
+Debt - to - Income ratio
+Credit Score
+The model likely picked up on a trend that is unseen in the data. Limiting the ability to replicate results.
+
+
+## Continued Work & Ideas for Improvement
+
+This analysis could be continued and improved upon with the following items/elements:
+
+#### Credit Score and Debt-to-Income
+The data set used to predict whether a mortgage loan would be approved or not did not contain credit scores. This element is a large factor a lender will take into consideration when deciding to approve or deny a loan application. For improved model performance and overall for a more realistic modeling situation an applicants credit score should be considered.
+
+The dataset also contained more than 50% null values in the debt-to-income category. Much like credit score, this factor has a huge impact on whether or not an applicant is approved for a mortgage loan. Lending standards limit the maximum debt-to-income limit at 50%. This factor would be nice to include in a future model and likeliy improve the model's accuracy.
+
+#### Neighborhood Specific Rental Figures
+The data provided by the Fair Market Rents FY 2020 dataset was limited to a general county rental figure. With many counties, especially those located in an urban center, they often contain many neighborhoods and differing regions. These neighborhoods oftentimes fetch higher or lower rental amounts based on many local factors. To improve the effectivness of this application the more specific and acurate the rental figure is the more accurate the whole application becomes.
+
+#### Multiple Unit Analysis
+Many of the properties contained in the datasets contain multiple units such as a duplex containing two income producing units. The application is currently limited to only single units. To improve the overall usefullness of the application, calculations for multiple units within one address could be added.
   
