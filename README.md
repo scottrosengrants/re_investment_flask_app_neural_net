@@ -8,24 +8,29 @@ According to the location of the property and user provided financial informatio
 ### Repo Structure:
 Included in this specific repo
 
-executive_summary
-technical_summary
-presentation_slides
+executive_summary <br>
+technical_summary <br>
+presentation_slides <br>
 
-data_dictionaries
- - includes information about the three data sources
+data_dictionaries 
+- includes information about the three data sources
+
 notebooks
-  - includes Jupyter Notebooks
-    - cleaning data
-    - eda
-    - api calls
-    - application
+- includes Jupyter Notebooks
+  - cleaning data
+  - eda
+  - api calls
+  - application
+  
 my_flask
-  - inludes flask files with application
+- inludes flask files with application
+
 models
- - includes trained Neural Net model and preprocessing scaler
+- includes trained Neural Net model and preprocessing scaler
+
 images
- - contains image files used throughout the reports and slides
+- contains image files used throughout the reports and slides
+
 data folder (ommitted due to file size)
 
 
