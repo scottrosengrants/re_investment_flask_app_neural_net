@@ -1,4 +1,4 @@
-# re_investment
+# RE Investment Application with Neural Net
 
 ## Overview:
 
