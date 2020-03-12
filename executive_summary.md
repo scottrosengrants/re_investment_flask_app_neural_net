@@ -39,8 +39,10 @@ The application developed does the following:
 
 ### Data
 
+In order to construct the application and train a predictive model several types of data had to be collected. Property info, rental amounts, and past mortgage loan records were all needed. Below is a brief summary of were each of those dataset were found. 
+
 #### Property Record & Attributes
-The ATTOM Data "All Records" api call is utilized to collect the public information and property feature information.
+The ATTOM Data "All Records" api call was utilized to collect the public information and property feature information.
 
 https://api.developer.attomdata.com/
 
@@ -92,7 +94,7 @@ The target of the model was to accurately predict whether an applicant would be 
 
 "Not applicable" is the status given for an approved loan.
 
-After further analysis of the targets a binomial target was created. All denial reasons were categorized together into simpy a "denied" category. This helped simplify the model predictions.
+After further analysis of the targets a binomial target was created. All denial reasons were categorized together into simply a "denied" category. This helped simplify the model predictions.
 
 This decision also made logical sense as many of the denial reasons were questionable as to whether a model can accurately predict that particular outcome given it's limited inputs. Take for example "Credit application incomplete" or "Unverifiable information" denial reasons. While these are valid denial reasons they may not be as relevant to the information the model is provided. Each instance of the model is provided a complete dataset so it is tough to have it predict an "incomplete application". By combining these denial reasons into simply one denial classification this helps generalize the model predictions to the data and helps alliviate this shortcoming of the model design.
 
@@ -102,7 +104,24 @@ The targets were converted to a binary classification:
 1 = Loan Approved
 
 ## Real Estate Calculations
-  
+
+The application calculates several standard real estate investing calculations to provide the user information about the potential returns on investment they can expect from a given property. For a complete breakdown of these calculations, refer to the technical_report included in this repository.
+
+
+**Monthly Cash Flow**  =       Monthly Income 
+                         - Vacancy Expense 
+                         - Mainenance Expense
+                         - Water & Trash 
+                         - Monthly Finance Expense
+                         - Monthly Taxes
+                         - Monthly Insurance
+
+**Annual Cashflow**    =       Monthly Cashflow * 12 Months
+
+**Cash on Cash Return (COC)** = (Annual Cashflow / Total Cash Invested) * 100
+
+**Capitalization Rate (Cap Rate)** = Annual Cashflow (less Financing Expense) / Property Price
+    
 ## Application
 
   <img src="https://github.com/scottrosengrants/re_investment_flask_app_neural_net/blob/master/images/app_inputs_1.jpeg" style="width: 500px"><img src="https://github.com/scottrosengrants/re_investment_flask_app_neural_net/blob/master/images/app_inputs_2.jpeg" style="width: 500px">
