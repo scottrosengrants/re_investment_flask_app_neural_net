@@ -8,6 +8,10 @@ According to the location of the property and user provided financial informatio
 ### Repo Structure:
 Included in this specific repo
 
+executive_summary
+technical_summary
+presentation_slides
+
 data_dictionaries
  - includes information about the three data sources
 notebooks
@@ -16,8 +20,12 @@ notebooks
     - eda
     - api calls
     - application
-flask
+my_flask
   - inludes flask files with application
-data folder (contains all clean datasets in csv format)
-results folder (contains a csv for each model)
-presentation slides (pdf format) for Reddit stakeholders
+models
+ - includes trained Neural Net model and preprocessing scaler
+images
+ - contains image files used throughout the reports and slides
+data folder (ommitted due to file size)
+
+
