@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Property Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <style> 
+        input[type=attom] {
+          width: 20%;
+          padding: 6px 10px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 1.5px solid red;
+          border-radius: 4px;
+        }
+        input[type=user] {
+          width: 20%;
+          padding: 6px 10px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 1.5px solid green;
+          border-radius: 4px;
+        }
+        input[type=loan] {
+          width: 20%;
+          padding: 6px 10px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: 1.5px solid blue;
+          border-radius: 4px;
+        }
+        div {
+            margin-left: 80px;
+            margin-right: 200px;
+            }
+        </style>
+        
+<head>
+
+<body>
+	<form action="/submit">		
+        <div>
+        <p>
+			<label for="property_number">Property Number</label><br>
+			<input type="attom" name="property_number">
+		</p>
+		<p>
+			<label for="street_name">Street Name</label><br>
+			<input type="attom" name="street_name">
+        </p>
+        <p>
+			<label for="street_type">Street Type</label><br>
+			<input type="attom" name="street_type">
+        </p>
+        <p>
+			<label for="city">City</label><br>
+			<input type="attom" name="city">
+        </p>
+        <p>
+			<label for="state">State</label><br>
+			<input type="attom" name="state">
+        </p>
+        <p>
+			<label for="price">Property Price</label><br>
+			<input type="user" name="price">
+		</p>
+		<p>
+			<label for="down_payment_pct">Down Payment Percentage (exp. 0.25)</label><br>
+			<input type="user" name="down_payment_pct">
+        </p>
+        <p>
+			<label for="preapproval">Are you preapproved? (0=NO, 1=YES)</label><br>
+			<input type="loan" name="preapproval">
+        </p>
+        <p>
+			<label for="interest_rate">Interest Rate (exp. 4.5)</label><br>
+			<input type="loan" name="interest_rate">
+        </p>
+        <p>
+			<label for="loan_term">Loan term in months?</label><br>
+			<input type="loan" name="loan_term">
+        </p>
+        <p>
+			<label for="interest_only_payment">Interest only loan? (1=NO, 0=YES)</label><br>
+			<input type="loan" name="interest_only_payment">
+        </p>
+        <p>
+			<label for="loan">Enter loan type (1 = Conv, 2 = FHA, 3 = VA, 4 = FSA/RHS)</label><br>
+			<input type="loan" name="loan">
+        </p>
+        <p>
+			<label for="balloon_payment">Balloon payment(1=NO, 0=YES)</label><br>
+			<input type="loan" name="balloon_payment">
+        </p>
+        <p>
+			<label for="occupancy_type">Will this property be your primary residence? (1=YES, 0=NO)</label><br>
+			<input type="loan" name="occupancy_type">
+        </p>
+        <p>
+			<label for="income">Enter your annual income</label><br>
+			<input type="loan" name="income">
+        </p>
+        <p>
+			<label for="submission_of_application">Are you working directly with a bank? (1=NO, 0=YES)</label><br>
+			<input type="loan" name="submission_of_application">
+        </p>
+        
+        <p><button type="submit">Submit</button></p>
+        </div>
+	</form>
+</body>
+</html>

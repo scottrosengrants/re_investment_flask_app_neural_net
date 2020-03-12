@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+
+    <title>Property Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    <style>
+        div {
+        margin-left: 80px;
+        margin-right: 200px;
+            }
+
+    </style>
+<head>
+	
+<body>
+    <div>
+    <h1>Property Report for: {{ address }} </h1>
+        <h3 style="color:green;">Monthly Income: ${{ m_rent }}</h3> 
+        <div>
+            <h4 style="color:red;">Vacancy Expense (5%): ${{ vr }} </h4>
+            <h4 style="color:red;">Expense Reserves (10%): ${{ er }}</h4>
+            <h4 style="color:red;">Monthy Expenses(Trash & Water): ${{ me }} </h4>
+            <h4 style="color:red;">Monthly Taxes: ${{ mt }}</h4>
+            <h4 style="color:red;">Monthly Insurance: ${{ mi }}</h4>
+            <h4 style="color:red;">Monthly Financing Expense: ${{ mfc }}</h4>
+        </div>
+        <h3>Monthly Cashflow: ${{ mcf }}</h3>
+        <h3>Annual Cashflow: ${{ acf }}</h3>
+        <br>
+    <h2> Cash-on-Cash Return: {{ coc }}%</h2>
+    <h2>Capitalization Rate: {{ cap }}%</h2>
+        <br>
+    <h3> ATTOM AVM Poor-Quality Range: <h3>
+        <H4>{{ poor }}</H4>
+    <h3> ATTOM AVM Good-Quality:  <h3>
+        <h4>{{ good }}</h4>
+    <h3> ATTOM AVM Excellent-Quality:  <h3>
+        <h4>{{ excellent }}</h4>
+        <br>
+    <h2 style="color:blue;">You are {{ pred }} to qualify for a mortgage loan on this particular property</h2>
+    <br>
+    <br>
+    
+    <h4>This application is for educational purposes only. 
+        No warranties are made on the completness, reliability, and accuracy of this information </h4>
+    </div>
+    </body>
+</html>
