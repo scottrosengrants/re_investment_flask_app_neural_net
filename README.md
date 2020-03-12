@@ -74,8 +74,31 @@ These three datasets each work together to provide the database for the applicat
 
 ----------------> The real estate calculations are made from the property profile and displayed.
      
-
 ## Modeling
+
+The target of the model was to accurately predict whether an applicant would be approved or denied for a mortgage loan. The data set originally provided the below denial reasons:
+
+1 - Debt-to-income ratio
+2 - Employment history
+3 - Credit history
+4 - Collateral
+5 - Insufficient cash (downpayment, closing costs)
+6 - Unverifiable information
+7 - Credit application incomplete
+8 - Mortgage insurance denied
+9 - Other
+10 - Not applicable
+
+"Not applicable" is the status given for an approved loan.
+
+After further analysis of the targets a binomial target was created. All denial reasons were categorized together into simpy a "denied" category. This helped simplify the model predictions.
+
+This decision also made logical sense as many of the denial reasons were questionable as to whether a model can accurately predict that particular outcome given it's limited inputs. Take for example "Credit application incomplete" or "Unverifiable information" denial reasons. While these are valid denial reasons they may not be as relevant to the information the model is provided. Each instance of the model is provided a complete dataset so it is tough to have it predict an "incomplete application". By combining these denial reasons into simply one denial classification this helps generalize the model predictions to the data and helps alliviate this shortcoming of the model design.
+
+The targets were converted to a binary classification:
+
+0 = Loan Not Approved
+1 = Loan Approved
 
 ## Real Estate Calculations
   
