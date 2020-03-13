@@ -1,5 +1,5 @@
 # Executive Summary
-### RE Investment Application with Neural Net
+### RE Investment Application with Neural Network Model
 
 ## Overview:
 
@@ -81,16 +81,16 @@ These three datasets each work together to provide the database for the applicat
 
 The target of the model was to accurately predict whether an applicant would be approved or denied for a mortgage loan. The data set originally provided the below denial reasons:
 
-1 - Debt-to-income ratio
-2 - Employment history
-3 - Credit history
-4 - Collateral
-5 - Insufficient cash (downpayment, closing costs)
-6 - Unverifiable information
-7 - Credit application incomplete
-8 - Mortgage insurance denied
-9 - Other
-10 - Not applicable
+1 - Debt-to-income ratio <br>
+2 - Employment history<br>
+3 - Credit history<br>
+4 - Collateral<br>
+5 - Insufficient cash (downpayment, closing costs)<br>
+6 - Unverifiable information<br>
+7 - Credit application incomplete<br>
+8 - Mortgage insurance denied<br>
+9 - Other<br>
+10 - Not applicable<br>
 
 "Not applicable" is the status given for an approved loan.
 
@@ -100,8 +100,12 @@ This decision also made logical sense as many of the denial reasons were questio
 
 The targets were converted to a binary classification:
 
-0 = Loan Not Approved
-1 = Loan Approved
+0 = Loan Not Approved<br>
+1 = Loan Approved<br>
+
+Both logistic regression models and neural networks were applied to the datset. A neural network was found to perform the best with an overall accuracy of 94.15% of correctly predicting whether a mortgage loan application would be approved. More information is provided on the exact specifications of this neural network in the technical_report provided in this repository. 
+
+This model was stored in the repository and can be called upon the application any time an investor uses the application. This streamlines the process for the investor and allows them to reach out to loan officers and bank less frequently in their property search. 
 
 ## Real Estate Calculations
 
@@ -121,24 +125,38 @@ The application calculates several standard real estate investing calculations t
 **Cash on Cash Return (COC)** = (Annual Cashflow / Total Cash Invested) * 100
 
 **Capitalization Rate (Cap Rate)** = Annual Cashflow (less Financing Expense) / Property Price
+
+**ATTOM Data Property Valuation**
+
+ATTOM's api provides a general property valuation for three tiers of quality of a given subject Property. They have a proprietary algorithm that will assign a property a valuation based on up to 100 property comparables sold in the last year in the area of the subject property.
+
+Valuation Tiers:
+
+Poor Condition <br>
+Average Condition <br>
+Good Condition <br>
+
+These valuations are provided to the user to help them get an idea of whether or not the property they are analyzing is priced realistically and fairly.
+
     
 ## Application
 
+Below are several screenshots of the application. While basic, the MVP does successfully take user input, retrieve the correct property info, calculate the real estate investment calculations, and make a prediction on the investors loan approval rating from a neural network. 
+
+### User Input Page
   <img src="https://github.com/scottrosengrants/re_investment_flask_app_neural_net/blob/master/images/app_inputs_1.jpeg" style="width: 500px"><img src="https://github.com/scottrosengrants/re_investment_flask_app_neural_net/blob/master/images/app_inputs_2.jpeg" style="width: 500px">
+  
+### Results Page
 
   <img src="https://github.com/scottrosengrants/re_investment_flask_app_neural_net/blob/master/images/app_results.jpeg" style="width: 500px">
   
 ## Limitations
 
-The rental data is only based on County, this limits the accuracy of this information. 
+The rental data is only based on County, this limits the accuracy of this information. While the rental data is still correct it is somewhat diluted in regions where rental amounts can vary widely.
 
 The model is a “black-box” model resulting more accurate predictions but unfortunately little to no insight to the user as to why they may be denied for a loan. 
 
-The data used to train the model was limited and may not be indicative to actual approval odds.
-Debt - to - Income ratio
-Credit Score
-The model likely picked up on a trend that is unseen in the data. Limiting the ability to replicate results.
-
+The data used to train the model was limited and may not be indicative to actual approval odds. Debt-to-Income ratio and Credit Score are known to be very good indicators to whether a mortgage loan application is approved or not. They were not included in this model. Unfortunately that may result in a model that has a high accuracy rating when testing it but does not translate well to a real world scenario. More analysis is needed to confirm the models true predictive ability. 
 
 ## Continued Work & Ideas for Improvement
 
@@ -154,3 +172,13 @@ The data provided by the Fair Market Rents FY 2020 dataset was limited to a gene
 
 #### Multiple Unit Analysis
 Many of the properties contained in the datasets contain multiple units such as a duplex containing two income producing units. The application is currently limited to only single units. To improve the overall usefullness of the application, calculations for multiple units within one address could be added.
+
+## Problem Statement - Application Objectives Revisited: 
+
+After completion of this project/analysis the following statements can be made:
+
+Given a property address a relevant rental amount can be found for the propety.
+
+Standard real estate metrics can be automated.
+
+Given the location of a property and user provided financial information a model can be developed for predicting the approval of a potential mortgage loan, however more testing on real world data will be needed to confirm its accuracy and effectiveness. 
